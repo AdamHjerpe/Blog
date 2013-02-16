@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Cousine:400,700,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+h1, h2, h3, h4 h5, h6 {
+  font-family: georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  background: #eee;
+  color: #555;
+  font-family: Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.5em; }
+
+header {
+  width: 100%;
+  height: 12em;
+  margin: 0 0 3em 0;
+  background: #ff9666;
+  border-bottom: 1px solid #e54800; }
+
+.wrapper {
+  max-width: 37.5em;
+  min-width: 30em;
+  margin: 0 auto; }
