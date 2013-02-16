@@ -17,6 +17,18 @@
 // Variables //
 ///////////////
 
+// Font-sizes
+
+// Desktop font-size
+$f-size: 16px;
+// Tablet font-size
+$f-size2: 14px;
+// Mobile fon-size 
+$f-size3: 12px;
+
+// Line height, change to match vertical rhytm for document
+$l-height: 1.5em;
+
 // Header background color or pattern
 $head-col: #FF9666;
 
@@ -44,7 +56,7 @@ body {
 	color: #555;
 	font: {
 		family: $p-font;
-		size : 16px;
+		size : $f-size;
 		weight: 400;}
 	letter-spacing: -0.05em;
 	line-height: $l-height;}
@@ -52,10 +64,10 @@ body {
 
 header{
 	width: 100%;
-	height: 12em;
+	height: 6em;
 	margin: 0 0 3em 0;
 	background: $head-col;
-	border-bottom: 1px solid darken($head-col, 25%);}
+	border-bottom: 1px solid darken($head-col, 10%);}
 
 .wrapper {
 	@include col-width;

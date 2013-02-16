@@ -26,17 +26,47 @@ $h-font: georgia, "Times New Roman", serif;
 // All stylings for headings //
 ///////////////////////////////
 
-
-///////////////
-// Variables //
-///////////////
-
-// Line height, change to match vertical rhytm for document
-$l-height: 1.5em;
-
-// Main styling
-
-h1, h2, h3, h4 h5, h6 {
-	font: {
-		family: $h-font;}
+h1, h2, h3, h4, h5, h6 {
+  font: {
+    family: $h-font;
+    weight: bold;}
 	-webkit-font-smoothing: antialiased}
+
+h1 {
+  font: {
+    size: 2em;}
+    margin: 0 0 ;}
+
+h2 {
+  font: {
+    size: 1.8em;}}
+
+h3 {
+  font: {
+    size: 1.6em;}}
+
+h4 {
+  font: {
+    size: 1.4em;}}
+
+h5 {
+  font: {
+    size: 1.2em;}}
+
+h6 {
+  font: {
+    size: 1em;}}
+
+///////////////////////////////////////////
+// All stylings for general text content //
+///////////////////////////////////////////
+
+p {
+	font: {
+		family: $p-font;
+		size: $f-size;}
+	margin: 0 0 $l-height 0;}
+
+ul,ol {
+	margin: 0 0 $l-height $l-height;
+}
