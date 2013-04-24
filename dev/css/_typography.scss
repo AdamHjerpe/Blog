@@ -35,7 +35,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font: {
     size: 2em;}
-    margin: 0 0 ;}
+  margin: 0 0 /* insert calc function for font-size/$l-height=margin-bottom or similair */;
+  border-bottom: 1px solid darken($head-col, 10%);
+  border-spacing: 10px}
 
 h2 {
   font: {
