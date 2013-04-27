@@ -32,6 +32,8 @@ $l-height: 1.5em;
 // Header background color or pattern
 $head-col: #FF9666;
 
+// Font Color
+$font-col: #555;
 
 ////////////
 // Mixins //
@@ -53,7 +55,7 @@ $head-col: #FF9666;
 
 body {
 	background: #eee;
-	color: #555;
+	color: $font-col;
 	font: {
 		family: $p-font;
 		size : $f-size;
