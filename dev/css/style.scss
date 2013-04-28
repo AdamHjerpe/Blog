@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Theme name: Do or Die;                                                                                    //
 // Author: Adam Hjerpe;                                                                                      //
-// License: GNU General Public License, version 3.0 (GPLv3) url(http://opensource.org/licenses/gpl-3.0.html); //
+// License: GNU General Public License, version 3.0 (GPLv3) url(http://opensource.org/licenses/gpl-3.0.html);//
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // @import: "compass";
@@ -20,23 +20,30 @@
 // Font-sizes
 
 // Desktop font-size
-$f-size: 16px;
+	$f-size: 16px;
 // Tablet font-size
-$f-size2: 14px;
-// Mobile fon-size 
-$f-size3: 12px;
+	$f-size2: 14px;
+// Mobile font-size 
+	$f-size3: 12px;
 
 // Line height, change to match vertical rhytm for document
-$l-height: 1.5em;
+	$l-height: 1.5em;
 
 // Header background color or pattern
-$head-col: #FF9666;
+	// Orange:;
+		// $head-col: #FF9666;
+	// Facebook Blue:;
+		// $head-col: #4660a2;
+	// Linus Lilja Teal: 
+	 $head-col: #10D080;
+	// Random Red
+		// $head-col: #C14444;
 
 // Background color
-$bg-col: #eeeeee;
+	$bg-col: #eeeeee;
 
 // Font Color
-$font-col: #555555;
+	$font-col: #555555;
 
 ////////////
 // Mixins //
@@ -82,8 +89,12 @@ header {
 		border-bottom: none;
 		color: lighten($bg-col, 5%);
 		margin: 0;
-	&:visited, &:hover, &:focus, &:active {
-    color: lighten($bg-col, 5%);}}
+	&:hover {
+		color: darken($bg-col, 25%);
+		border-bottom: none;}
+	&:visited, &:focus, &:active {
+    color: lighten($bg-col, 5%);
+    border-bottom: none;}}
 	}
 
 .wrapper {
@@ -146,7 +157,7 @@ header {
 
 .pagination-arrow{
     display: inline-block;
-    font: bold 16px/1 $p-font;
+    font: bold 16px/1 $h-font;
     border: 1px solid #ccc;
     border-radius: 3px;
     margin: 20px 15px;
@@ -174,6 +185,40 @@ header {
 	    right:3px;
 	    border-color: transparent transparent transparent #555;}
 }
+//////////////////////
+// 404 Page Styling //
+//////////////////////
+$grad-col-outer: darken($head-col, 5%);
+$grad-col-inner: lighten($head-col, 5%);
+
+
+body.error-404 {
+  width: 100%;
+  background-size: cover;
+
+  background: darken($head-col, 5%); /* fallback for non-supporting browsers */  
+  background-image: -webkit-gradient(radial, center center, 0, center center, 141, from($grad-col-inner), to($grad-col-outer), color-stop(80%, $grad-col-outer)); /* old WebKit Syntax */  
+  background-image: -webkit-radial-gradient(center center, circle contain, $grad-col-inner 0%, $grad-col-outer 80%, $grad-col-outer 100%); /* New WebKit syntax */  
+  background-image: -moz-radial-gradient(center center, circle contain, $grad-col-inner 0%, $grad-col-outer 80%, $grad-col-outer 100%);  
+  background-image: -ms-radial-gradient(center center, circle contain, $grad-col-inner 0%, $grad-col-outer 80%, $grad-col-outer 100%); /* IE10+ */  
+  background-image: -o-radial-gradient(center center, circle contain, $grad-col-inner 0%, $grad-col-outer 80%, $grad-col-outer 100%); /* Opera (13?) */  
+}  
+
+
+.message{
+    padding-top:50px;
+	h1{
+    font-size:36px;
+    margin-bottom: 18px;}
+	p{
+    font-size:13px;}}
+
+.center{
+    text-align:center;
+}
+
+
+
 
 
 
