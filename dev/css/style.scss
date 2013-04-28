@@ -120,11 +120,13 @@ header {
     background: $head-col;
     border-bottom: 0.5em solid darken($head-col, 5%);
     padding: 0 1em;
+    margin-left: -1em;
     z-index: 0;}
   @media screen and (max-width: $break-large) {
     left: 5%;
     margin-left: 0;
-    width: auto;}
+    width: auto;
+    max-width: 20em}
   @media screen and (max-width: $break-small) {
     margin-left: 0;
     position: static;
@@ -177,6 +179,21 @@ header {
   bottom: 0;
   margin-left: -460px;
   padding-top: 65px;
+  ul{
+    font: bold 18px 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    list-style:none;}
+  ul li a{
+    text-decoration:none !important;
+    display:inline-block;
+    padding:0 3px;
+    margin:2px 0 2px 10px;}
+  p.author{
+      position: absolute;
+      bottom: 1.25em;
+      height: 2em;
+      font-size: 0.9em;
+      color: #888;}
   .author {
 		font-family: $h-font}
   @media screen and (max-width: $break-large) {

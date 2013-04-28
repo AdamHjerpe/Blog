@@ -179,13 +179,15 @@ header {
     background: #4660a2;
     border-bottom: 0.5em solid #3e5590;
     padding: 0 1em;
+    margin-left: -1em;
     z-index: 0; }
   @media screen and (max-width: 1024px) {
     /* line 112, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
     .header-wrap {
       left: 5%;
       margin-left: 0;
-      width: auto; } }
+      width: auto;
+      max-width: 20em; } }
   @media screen and (max-width: 840px) {
     /* line 112, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
     .header-wrap {
@@ -194,16 +196,16 @@ header {
       width: 90%;
       padding: 0 5% 0 5%; } }
 
-/* line 139, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+/* line 141, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 .wrapper {
   background: #eeeeee;
   padding: 0 2em; }
   @media screen and (max-width: 840px) {
-    /* line 139, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+    /* line 141, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
     .wrapper {
       padding: 0; } }
 
-/* line 146, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+/* line 148, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 .content {
   max-width: 37.5em;
   min-width: 30em;
@@ -214,14 +216,14 @@ header {
   padding: 1.5em 3em;
   background: #f4f4f4; }
   @media screen and (max-width: 1024px) {
-    /* line 146, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+    /* line 148, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
     .content {
       left: 35%;
       margin-left: 0;
       width: 60%;
       min-width: 60%; } }
   @media screen and (max-width: 840px) {
-    /* line 146, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+    /* line 148, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
     .content {
       position: static;
       padding: 5%;
@@ -229,7 +231,7 @@ header {
       width: 90%;
       min-width: 90%; } }
 
-/* line 171, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+/* line 173, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 .sidebar {
   position: fixed;
   width: 250px;
@@ -239,47 +241,65 @@ header {
   bottom: 0;
   margin-left: -460px;
   padding-top: 65px; }
-  /* line 180, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  /* line 182, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  .sidebar ul {
+    font: bold 18px "Open Sans Condensed", sans-serif;
+    text-transform: uppercase;
+    list-style: none; }
+  /* line 186, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  .sidebar ul li a {
+    text-decoration: none !important;
+    display: inline-block;
+    padding: 0 3px;
+    margin: 2px 0 2px 10px; }
+  /* line 191, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  .sidebar p.author {
+    position: absolute;
+    bottom: 1.25em;
+    height: 2em;
+    font-size: 0.9em;
+    color: #888; }
+  /* line 197, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
   .sidebar .author {
     font-family: "Open Sans Condensed", sans-serif; }
   @media screen and (max-width: 1024px) {
-    /* line 171, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+    /* line 173, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
     .sidebar {
       left: 5%;
       margin-left: 0;
       width: 25%; } }
   @media screen and (max-width: 840px) {
-    /* line 171, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+    /* line 173, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
     .sidebar {
       margin-left: 0;
       position: static;
       width: 90%;
       padding: 5% 5% 0 5%;
       text-align: center; }
-      /* line 192, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+      /* line 209, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
       .sidebar .description {
         margin-bottom: 1.5em; }
-      /* line 194, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+      /* line 211, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
       .sidebar li {
         display: inline-block; }
-      /* line 196, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+      /* line 213, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
       .sidebar ul {
         text-align: center; }
-      /* line 198, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+      /* line 215, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
       .sidebar .author {
         display: none; } }
 
-/* line 209, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+/* line 226, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 .post h1 {
   text-transform: capitalize; }
-/* line 211, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+/* line 228, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 .post .date {
   font: 700 0.75em Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
   text-transform: uppercase;
   color: #959595;
   margin: 24px 0 1.5em 20px;
   position: relative; }
-  /* line 217, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  /* line 234, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
   .post .date:before {
     width: 18px;
     height: 18px;
@@ -289,7 +309,7 @@ header {
     top: -3px;
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyNjZDQjA1OTM1ODZFMjExQUUwM0IwQzQwMjlEOTczMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENjYzQjI4QjhCNDYxMUUyQjNENkFGQ0NCRUExRDM1NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENjYzQjI4QThCNDYxMUUyQjNENkFGQ0NCRUExRDM1NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NjA1NUJCNzUzOEFFMjExQUUwM0IwQzQwMjlEOTczMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyNjZDQjA1OTM1ODZFMjExQUUwM0IwQzQwMjlEOTczMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhTXJRoAAADXSURBVHjaYvz//z8DNQDL7t27sYmDTGfEoQdDztXVlYEJyg4B4rdA/AGLJhjGJgfS4wfiwAyaCcRCQMwGxMxQMTY0jdjkQHqmwQzihwqAACcQ50CdXoRmEC45aXAYYQmDCVDMQIocskGMZEbYB+QwQokBEAaCzch8dDF0wMRAJcC4a9cufqjzYF7bTKReX5jXgC4UYMHiNbACYEJ9AaQkkL2BLIaekIeA15AUbEZiM+ARo67XQAZ9BOJ3eFxGSOwFcspOBOLnoBgh0SEgQ+LAgU2tgg0gwACqTkAIjemp4gAAAABJRU5ErkJggg=="); }
 
-/* line 232, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+/* line 249, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 .pagination-arrow {
   display: inline-block;
   font: bold 1em/1 "Open Sans Condensed", sans-serif;
@@ -301,14 +321,14 @@ header {
   text-decoration: none !important;
   text-transform: uppercase;
   position: relative; }
-  /* line 243, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  /* line 260, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
   .pagination-arrow .newer {
     padding-left: 20px; }
-  /* line 245, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  /* line 262, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
   .pagination-arrow .older {
     padding-right: 20px;
     float: right; }
-  /* line 248, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  /* line 265, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
   .pagination-arrow .newer:before, .pagination-arrow .older:before {
     content: '';
     border: 5px solid #555555;
@@ -318,13 +338,13 @@ header {
     position: absolute;
     left: 3px;
     top: 12px; }
-  /* line 257, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  /* line 274, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
   .pagination-arrow .older:before {
     left: auto;
     right: 3px;
     border-color: transparent transparent transparent #555555; }
 
-/* line 269, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+/* line 286, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 body.error-404 {
   color: #eeeeee;
   width: 100%;
@@ -341,17 +361,17 @@ body.error-404 {
   background-image: -o-radial-gradient(center center, circle contain, #4f6bb3 0%, #3e5590 80%, #3e5590 100%);
   /* Opera (13?) */ }
 
-/* line 283, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+/* line 300, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 .message {
   padding-top: 50px; }
-  /* line 285, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  /* line 302, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
   .message h1 {
     font-size: 36px;
     margin-bottom: 18px; }
-  /* line 288, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  /* line 305, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
   .message p {
     font-size: 13px; }
 
-/* line 291, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+/* line 308, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 .center {
   text-align: center; }
