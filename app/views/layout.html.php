@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="main-header">
-        <section class="center-wrap">
+        <section class="header-wrap">
           <h1><a href="<?php echo site_url() ?>"><?php echo config('blog.title') ?></a></h1>
         </section>
     </header>
@@ -47,6 +47,5 @@
     </footer>
     <!-- /.main-footer -->
     <!-- Keep script import at bottom, right before closing </body> tag -->
-    <script src="js/bootstrap.js"></script>
   </body>
 </html>
