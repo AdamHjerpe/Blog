@@ -8,7 +8,7 @@
 
 
 //////////////////////////
-// Css production reset //
+// Css development reset //
 //////////////////////////
 
  * { margin: 0; padding: 0; border: none; outline: none; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased;}
@@ -32,8 +32,11 @@ $l-height: 1.5em;
 // Header background color or pattern
 $head-col: #FF9666;
 
+// Background color
+$bg-col: #eeeeee;
+
 // Font Color
-$font-col: #555;
+$font-col: #555555;
 
 ////////////
 // Mixins //
@@ -54,7 +57,8 @@ $font-col: #555;
 ////////////
 
 body {
-	background: #eee;
+	background: $bg-col;
+	// background: desaturate(lighten($head-col, 5%), 5%);
 	color: $font-col;
 	font: {
 		family: $p-font;
@@ -64,13 +68,112 @@ body {
 	line-height: $l-height;}
 
 
-header{
+header {
 	width: 100%;
 	height: 6em;
-	margin: 0 0 3em 0;
+	margin: 0 0 0 0;
 	background: $head-col;
-	border-bottom: 1px solid darken($head-col, 10%);}
+	border-bottom: 1em solid darken($head-col, 5%);
+	h1 {
+		line-height: 3em;
+		font-family: $h-font;
+		font-weight: 700;}
+	a {
+		border-bottom: none;
+		color: lighten($bg-col, 5%);
+		margin: 0;
+	&:visited, &:hover, &:focus, &:active {
+    color: lighten($bg-col, 5%);}}
+	}
 
 .wrapper {
+	background: $bg-col;
+	padding: 0 2em}
+
+.content {
 	@include col-width;
+  position: absolute;
+  font: 16px/1.5 $p-font;
+  width: 580px;
+  left: 50%;
+  margin-left: -100px;
+	padding: 1.5em 3em;
+	background: lighten($bg-col, 2.5%);}
+
+.sidebar{
+	position: fixed;
+  width: 250px;
+  height: auto;
+  top: 7em;
+  left: 50%;
+  bottom: 0;
+  margin-left: -460px;
+  padding-top: 65px;
+  .author {
+		font-family: $h-font}}
+
+.center-wrap {
+	width: 50%;
 	margin: 0 auto;}
+
+//////////////////
+// Post Styling //
+//////////////////
+
+.post {
+	h1{
+		text-transform:capitalize;}
+	.date{
+    font: 700 0.75em $p-font;
+    text-transform: uppercase;
+    color: lighten($font-col, 25%);
+    margin: 24px 0 1.5em 20px;
+    position: relative;
+    &:before{
+	    width:18px;
+	    height:18px;
+	    position:absolute;
+	    content:'';
+	    left: -22px;
+	    top: -3px;
+	    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyNjZDQjA1OTM1ODZFMjExQUUwM0IwQzQwMjlEOTczMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENjYzQjI4QjhCNDYxMUUyQjNENkFGQ0NCRUExRDM1NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENjYzQjI4QThCNDYxMUUyQjNENkFGQ0NCRUExRDM1NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NjA1NUJCNzUzOEFFMjExQUUwM0IwQzQwMjlEOTczMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyNjZDQjA1OTM1ODZFMjExQUUwM0IwQzQwMjlEOTczMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhTXJRoAAADXSURBVHjaYvz//z8DNQDL7t27sYmDTGfEoQdDztXVlYEJyg4B4rdA/AGLJhjGJgfS4wfiwAyaCcRCQMwGxMxQMTY0jdjkQHqmwQzihwqAACcQ50CdXoRmEC45aXAYYQmDCVDMQIocskGMZEbYB+QwQokBEAaCzch8dDF0wMRAJcC4a9cufqjzYF7bTKReX5jXgC4UYMHiNbACYEJ9AaQkkL2BLIaekIeA15AUbEZiM+ARo67XQAZ9BOJ3eFxGSOwFcspOBOLnoBgh0SEgQ+LAgU2tgg0gwACqTkAIjemp4gAAAABJRU5ErkJggg==')
+}}}
+
+
+////////////////////////
+// Pagination Styling //
+////////////////////////
+
+.pagination-arrow{
+    display: inline-block;
+    font: bold 16px/1 $p-font;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 20px 15px;
+    color: #555 !important;
+    padding: 8px 12px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    position: relative;
+    .newer{
+    	padding-left: 20px;}
+    .older{
+	    padding-right: 20px;
+	    float:right;}
+    .newer:before, .older:before {
+	    content: '';
+	    border: 5px solid #555;
+	    border-color: transparent #555 transparent transparent;
+	    width: 0;
+	    height: 0;
+	    position: absolute;
+	    left: 3px;
+	    top: 12px;}
+	  .older:before{
+	    left:auto;
+	    right:3px;
+	    border-color: transparent transparent transparent #555;}
+}
+
+
+

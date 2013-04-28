@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Cousine:400,700,400italic);
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/style\.scss}line{font-family:\0000314}}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+/* line 14, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 * {
   margin: 0;
   padding: 0;
@@ -8,63 +9,115 @@
   vertical-align: baseline;
   -webkit-font-smoothing: subpixel-antialiased; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000329}}
+/* line 29, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: georgia, "Times New Roman", serif;
+  line-height: 1.5em;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
   -webkit-font-smoothing: antialiased; }
+  /* line 31, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+  h1 margin, h2 margin, h3 margin, h4 margin, h5 margin, h6 margin {
+    bottom: 1em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000335}}
+/* line 38, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 h1 {
   font-size: 2em;
-  margin: 0 0;
-  border-bottom: 1px solid #ff7333;
   border-spacing: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000342}}
+/* line 44, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 h2 {
   font-size: 1.8em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000346}}
+/* line 48, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 h3 {
   font-size: 1.6em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000350}}
+/* line 52, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 h4 {
   font-size: 1.4em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000354}}
+/* line 56, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 h5 {
   font-size: 1.2em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000358}}
+/* line 60, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 h6 {
   font-size: 1em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000366}}
+/* line 68, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 p {
   font-family: Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   margin: 0 0 1.5em 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000372}}
+/* line 74, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 ul, ol {
   margin: 0 0 1.5em 1.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000379}}
+/* line 81, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
 a {
   color: #555555;
-  border-bottom: 1px dotted #ffdccc; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000382}}
+  border-bottom: 0.1em solid #ff9666;
+  text-decoration: none; }
+  /* line 85, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
   a:visited {
-    color: #6e6e6e; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/_typography\.scss}line{font-family:\0000384}}
+    color: #959595;
+    border-bottom: 0.1em solid #ffcbb3; }
+  /* line 88, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+  a:hover {
+    color: #3b3b3b;
+    border-bottom: 0.1em solid #ff7333; }
+  /* line 91, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+  a:focus {
+    color: #2f2f2f;
+    border-bottom: 0.1em solid #ff621a; }
+  /* line 94, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
   a:active {
-    color: #222222; }
+    color: #2f2f2f;
+    border-bottom: 0.1em solid #ff621a; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/style\.scss}line{font-family:\0000356}}
+/* line 103, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+li {
+  margin: 0 0 0.5em 0; }
+
+/* line 111, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+em {
+  font-style: italic; }
+  /* line 113, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+  em font {
+    family: Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif; }
+
+/* line 117, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+strong font {
+  family: Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
+  weight: 700; }
+
+/* line 129, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+blockquote {
+  background: ligthen(#eeeeee, 1.5%);
+  border-left: 10px solid #ff854d;
+  margin: 1.5em 0;
+  padding: 0.5em 1.5em;
+  quotes: “\201C”“\201D”“\2018”“\2019”; }
+  /* line 134, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+  blockquote:lang(sv) {
+    quotes: "\201D" "\201D" "\2019" "\2019"; }
+  /* line 135, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+  blockquote:lang(da) {
+    quotes: "\00BB" "\00AB" "\203A" "\2039"; }
+  /* line 144, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+  blockquote:before {
+    content: open-quote; }
+  /* line 146, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+  blockquote:after {
+    content: close-quote; }
+  /* line 148, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/_typography.scss */
+  blockquote p {
+    display: inline; }
+
+/* line 59, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 body {
-  background: #eee;
+  background: #eeeeee;
   color: #555555;
   font-family: Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
   font-size: 16px;
@@ -72,16 +125,114 @@ body {
   letter-spacing: -0.05em;
   line-height: 1.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/style\.scss}line{font-family:\0000367}}
+/* line 71, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 header {
   width: 100%;
   height: 6em;
-  margin: 0 0 3em 0;
+  margin: 0 0 0 0;
   background: #ff9666;
-  border-bottom: 1px solid #ff7333; }
+  border-bottom: 1em solid #ff854d; }
+  /* line 77, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  header h1 {
+    line-height: 3em;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700; }
+  /* line 81, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  header a {
+    border-bottom: none;
+    color: #fbfbfb;
+    margin: 0; }
+    /* line 85, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+    header a:visited, header a:hover, header a:focus, header a:active {
+      color: #fbfbfb; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adamhjerpe\/Documents\/htdocs\/Blog\/dev\/css\/style\.scss}line{font-family:\0000374}}
+/* line 89, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
 .wrapper {
+  background: #eeeeee;
+  padding: 0 2em; }
+
+/* line 93, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+.content {
   max-width: 37.5em;
   min-width: 30em;
+  position: absolute;
+  font: 16px/1.5 Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
+  width: 580px;
+  left: 50%;
+  margin-left: -100px;
+  padding: 1.5em 3em;
+  background: #f4f4f4; }
+
+/* line 103, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: auto;
+  top: 7em;
+  left: 50%;
+  bottom: 0;
+  margin-left: -460px;
+  padding-top: 65px; }
+  /* line 112, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  .sidebar .author {
+    font-family: "Open Sans Condensed", sans-serif; }
+
+/* line 115, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+.center-wrap {
+  width: 50%;
   margin: 0 auto; }
+
+/* line 124, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+.post h1 {
+  text-transform: capitalize; }
+/* line 126, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+.post .date {
+  font: 700 0.75em Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
+  text-transform: uppercase;
+  color: #959595;
+  margin: 24px 0 1.5em 20px;
+  position: relative; }
+  /* line 132, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  .post .date:before {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    content: '';
+    left: -22px;
+    top: -3px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyNjZDQjA1OTM1ODZFMjExQUUwM0IwQzQwMjlEOTczMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENjYzQjI4QjhCNDYxMUUyQjNENkFGQ0NCRUExRDM1NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENjYzQjI4QThCNDYxMUUyQjNENkFGQ0NCRUExRDM1NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NjA1NUJCNzUzOEFFMjExQUUwM0IwQzQwMjlEOTczMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyNjZDQjA1OTM1ODZFMjExQUUwM0IwQzQwMjlEOTczMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhTXJRoAAADXSURBVHjaYvz//z8DNQDL7t27sYmDTGfEoQdDztXVlYEJyg4B4rdA/AGLJhjGJgfS4wfiwAyaCcRCQMwGxMxQMTY0jdjkQHqmwQzihwqAACcQ50CdXoRmEC45aXAYYQmDCVDMQIocskGMZEbYB+QwQokBEAaCzch8dDF0wMRAJcC4a9cufqjzYF7bTKReX5jXgC4UYMHiNbACYEJ9AaQkkL2BLIaekIeA15AUbEZiM+ARo67XQAZ9BOJ3eFxGSOwFcspOBOLnoBgh0SEgQ+LAgU2tgg0gwACqTkAIjemp4gAAAABJRU5ErkJggg=="); }
+
+/* line 147, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+.pagination-arrow {
+  display: inline-block;
+  font: bold 16px/1 Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  margin: 20px 15px;
+  color: #555555 !important;
+  padding: 8px 12px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  position: relative; }
+  /* line 158, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  .pagination-arrow .newer {
+    padding-left: 20px; }
+  /* line 160, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  .pagination-arrow .older {
+    padding-right: 20px;
+    float: right; }
+  /* line 163, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  .pagination-arrow .newer:before, .pagination-arrow .older:before {
+    content: '';
+    border: 5px solid #555555;
+    border-color: transparent #555555 transparent transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 3px;
+    top: 12px; }
+  /* line 172, /Users/adamhjerpe/Documents/htdocs/Blog/dev/css/style.scss */
+  .pagination-arrow .older:before {
+    left: auto;
+    right: 3px;
+    border-color: transparent transparent transparent #555555; }

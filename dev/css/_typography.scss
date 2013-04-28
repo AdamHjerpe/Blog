@@ -14,19 +14,22 @@ $p-font: Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
 // Import of font for headings and logo //
 //////////////////////////////////////////
 
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 
 ///////////////////////////////////////////////////////////////
 // Change h-font variable to match imported font family name //
 ///////////////////////////////////////////////////////////////
 
-$h-font: georgia, "Times New Roman", serif;
+$h-font: 'Open Sans Condensed', sans-serif;;
 
 ///////////////////////////////
 // All stylings for headings //
 ///////////////////////////////
 
 h1, h2, h3, h4, h5, h6 {
+  line-height: $l-height;
+  margin {
+    bottom: 1em;}
   font: {
     family: $h-font;
     weight: bold;}
@@ -35,8 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font: {
     size: 2em;}
-  margin: 0 0 /* insert calc function for font-size/$l-height=margin-bottom or similair */;
-  border-bottom: 1px solid darken($head-col, 10%);
+  // margin: 0 0 /* insert calc function for font-size/$l-height=margin-bottom or similair */;
   border-spacing: 10px}
 
 h2 {
@@ -66,7 +68,7 @@ h6 {
 p {
 	font: {
 		family: $p-font;
-		size: $f-size;}
+		size: 1em;}
 	margin: 0 0 $l-height 0;}
 
 ul,ol {
@@ -78,9 +80,74 @@ ul,ol {
 
 a {
   color: $font-col;
-  border-bottom: 1px dotted lighten($head-col, 20%);
+  border-bottom: 0.1em solid lighten($head-col, 0%);
+  text-decoration: none;
   &:visited {
-    color: lighten($font-col, 10%);}
+    color: lighten($font-col, 25%);
+    border-bottom: 0.1em solid lighten($head-col, 15%);}
+  &:hover {
+    color: darken($font-col, 10%);
+    border-bottom: 0.1em solid darken($head-col, 10%);}
+  &:focus {
+    color: darken($font-col, 15%);
+    border-bottom: 0.1em solid darken($head-col, 15%);}
   &:active {
-    color: darken($font-col, 20%);}
+    color: darken($font-col, 15%);
+    border-bottom: 0.1em solid darken($head-col, 15%);}
 }
+
+//////////////////
+// List styling //
+//////////////////
+
+li {
+  margin: 0 0 0.5em 0;
+}
+
+//////////////////////////
+// Highlighters styling //
+//////////////////////////
+
+em {
+  font-style: italic;
+  font {
+    family: $p-font;}
+}
+strong {
+  font {
+    family: $p-font;
+    weight: 700;}}
+
+///////////////////
+// Quote styling //
+///////////////////
+
+q {
+
+}
+
+blockquote {
+  background: ligthen($bg-col, 1.5%);
+  border-left:10px solid darken($head-col, 5%);
+  margin:1.5em 0;
+  padding:.5em 1.5em;
+  &:lang(sv) { quotes: '\201D' '\201D' '\2019' '\2019'; }
+  &:lang(da) { quotes: '\00BB' '\00AB' '\203A' '\2039'; }
+  quotes:“\201C”“\201D”“\2018”“\2019”;
+  &:before, &:after {
+    // color: darken($bg-col, 15%);
+    // font-size:4em;
+    // line-height:.1em;
+    // margin-right:.25em;
+    // vertical-align:-.4em;
+    }
+    &:before {
+      content: open-quote;}
+    &:after {
+      content: close-quote;}
+  p {
+    display:inline;}}
+
+///////////////////
+// Code Styling  //
+///////////////////

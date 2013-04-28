@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title><?php echo isset($title) ? _h($title) : config('blog.title') ?></title>
+  <head>
 
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no" />
-	<meta name="description" content="<?php echo config('blog.description')?>" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><?php echo isset($title) ? _h($title) : config('blog.title') ?></title>
+    <link rel="alternate" type="application/rss+xml" title="<?php echo config('blog.title')?>  Feed" href="<?php echo site_url()?>rss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no" />
+    <meta name="description" content="<?php echo config('blog.description')?>" />
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="main-header">
+        <section class="center-wrap">
+          <h1><a href="<?php echo site_url() ?>"><?php echo config('blog.title') ?></a></h1>
+        </section>
+    </header>
+    <!-- /.main-header -->    
+    <section class="wrapper">
+    <aside class="sidebar">
 
-	<link rel="alternate" type="application/rss+xml" title="<?php echo config('blog.title')?>  Feed" href="<?php echo site_url()?>rss" />
 
-	<link href="<?php echo site_url() ?>assets/css/style.css" rel="stylesheet" />
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext" rel="stylesheet" />
+        <p class="description"><?php echo config('blog.description')?></p>
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	
-</head>
-<body>
+        <ul>
+            <li><a href="<?php echo site_url() ?>">Home</a></li>
+        </ul>
 
-	<aside>
+        <p class="author"><?php echo config('blog.authorbio') ?></p>
 
-		<h1><a href="<?php echo site_url() ?>"><?php echo config('blog.title') ?></a></h1>
+    </aside>
 
-		<p class="description"><?php echo config('blog.description')?></p>
+  <section class="content">
 
-		<ul>
-			<li><a href="<?php echo site_url() ?>">Home</a></li>
-			<li><a href="http://tutorialzine.com/2013/03/simple-php-blogging-system/">Read the tutorial!</a></li>
-			<li><a href="http://tutorialzine.com/members/">Members area</a></li>
-			<li><a href="http://tutorialzine.com/contact/">Contact Us</a></li>
-		</ul>
+    <?php echo content()?>
 
-		<p class="author"><?php echo config('blog.authorbio') ?></p>
+  </section>
 
-	</aside>
-
-	<section id="content">
-
-		<?php echo content()?>
-
-	</section>
-
-</body>
+    </section>
+    <!-- /.wrapper -->
+    <footer class="main-footer">
+      
+    </footer>
+    <!-- /.main-footer -->
+    <!-- Keep script import at bottom, right before closing </body> tag -->
+    <script src="js/bootstrap.js"></script>
+  </body>
 </html>
