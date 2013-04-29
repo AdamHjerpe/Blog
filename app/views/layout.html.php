@@ -28,7 +28,10 @@
 
         <ul>
             <li><a href="<?php echo site_url() ?>">Home</a></li>
+            <li><a href="https://github.com/AdamHjerpe/">Github</a></li>
         </ul>
+
+        <p>This blog template is open source, fork it on <a href="https://github.com/AdamHjerpe/Blog">Github</a></p>
 
         <p class="author"><?php echo config('blog.authorbio') ?></p>
 
