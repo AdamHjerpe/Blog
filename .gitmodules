@@ -1,3 +1,6 @@
 [submodule "vendor/suin/php-rss-writer"]
 	path = vendor/suin/php-rss-writer
 	url = https://github.com/suin/php-rss-writer.git
+[submodule "vendor/dlydev/markdown"]
+	path = vendor/dlydev/markdown
+	url = https://github.com/dflydev/dflydev-markdown.git
