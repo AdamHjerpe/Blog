@@ -1,18 +1,18 @@
 ////////////////////////////////////
-// Import of fonts for breab text //
+// Import of fonts for bread text //
 ////////////////////////////////////
 
-@import url(http://fonts.googleapis.com/css?family=Cousine:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
 
 ///////////////////////////////////////////////////////////////
 // Change p-font variable to match imported font family name //
 ///////////////////////////////////////////////////////////////
 
-$p-font: Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
+$p-font: 'Open Sans', 'Helvetica Neue', Arial, Garuda, Sans-serif;
 
-//////////////////////////////////////////
-// Import of font for headings and logo //
-//////////////////////////////////////////
+/////////////////////////////////
+// Import of font for headings //
+/////////////////////////////////
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 
@@ -20,7 +20,19 @@ $p-font: Cousine, "Helvetica Neue", Arial, Garuda, Sans-serif;
 // Change h-font variable to match imported font family name //
 ///////////////////////////////////////////////////////////////
 
-$h-font: 'Open Sans Condensed', sans-serif;;
+$h-font: 'Open Sans Condensed', $p-font;
+
+//////////////////////////////////////
+// Import of fonts for code content //
+/////////////////////////////////////
+
+@import url(http://fonts.googleapis.com/css?family=Cousine:400,700,400italic);
+
+///////////////////////////////////////////////////////////////
+// Change code-font variable to match imported font family name //
+///////////////////////////////////////////////////////////////
+
+$code-font: Cousine, Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
 
 ///////////////////////////////
 // All stylings for headings //
@@ -134,7 +146,7 @@ blockquote {
   border-left:10px solid darken($head-col, 5%);
   margin:1.5em 0;
   padding:.5em 1.5em;
-  quotes:“\201C”“\201D”“\2018”“\2019”;
+  quotes:'\201C''\201D''\2018''\2019';
   &:lang(sv) { quotes: '\201D' '\201D' '\2019' '\2019'; }
   &:lang(da) { quotes: '\00BB' '\00AB' '\203A' '\2039'; }
   &:before, &:after {
@@ -154,3 +166,7 @@ blockquote {
 ///////////////////
 // Code Styling  //
 ///////////////////
+
+code, pre {
+  font-family: $code-font;
+}

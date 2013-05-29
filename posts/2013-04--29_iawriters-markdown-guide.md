@@ -50,4 +50,16 @@ Type “* * *”
 
 ### Writer’s Markdown syntax guide
 
+### Code 
+    get('/:year/:month/:name',function($year, $month, $name){
+      $post = find_post($year, $month, $name);
+      if(!$post){
+        not_found();
+      }
+      render('post',array(
+        'title' => $post->title .' ⋅ ' . config('blog.title'),
+        'p' => $post
+      ));
+    });
+
 → http://support.iawriter.com/help/kb/general-questions/markdown-syntax-reference-guide
