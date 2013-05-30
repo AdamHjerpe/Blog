@@ -1,6 +1,8 @@
 # The Markdown Blog 
 
 This project started out as a tutorial at Tutorialzine, and has since been a hobby project that I've maintained and experimented with.
+## Tools
+There are some great apps out there for web developers, in order to get this up and running I've used [Sublime Text 2](#) with an array of plugins, [CodeKit](#) and [Tower](#)
 
 # Dependencies 
 
@@ -18,3 +20,6 @@ In order to get that RSS-feed so people can follow your blog we use this package
 
 ## Extension Dependencies
 As time goes on further dependencies will be added here.
+
+### [google/code-prettify](https://code.google.com/p/google-code-prettify/)
+This plugin resides within the dev/js folder, it's imported from the source files from google. Also this is what gives us syntax highlighting.
