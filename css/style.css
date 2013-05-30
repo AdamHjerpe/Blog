@@ -47,6 +47,55 @@ blockquote p { display: inline; }
 
 code, pre { font-family: Cousine, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
 
+/* Pretty printing styles. Used with prettify.js. */
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: black; }
+
+/* plain text */
+@media screen { .str { color: #008800; }
+  /* string content */
+  .kwd { color: #000088; }
+  /* a keyword */
+  .com { color: #880000; }
+  /* a comment */
+  .typ { color: #660066; }
+  /* a type name */
+  .lit { color: #006666; }
+  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #666600; }
+  .tag { color: #000088; }
+  /* a markup tag name */
+  .atn { color: #660066; }
+  /* a markup attribute name */
+  .atv { color: #008800; }
+  /* a markup attribute value */
+  .dec, .var { color: #660066; }
+  /* a declaration; a variable name */
+  .fun { color: red; }
+  /* a function name */ }
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection { .str { color: #006600; }
+  .kwd { color: #006; font-weight: bold; }
+  .com { color: #600; font-style: italic; }
+  .typ { color: #404; font-weight: bold; }
+  .lit { color: #004444; }
+  .pun, .opn, .clo { color: #444400; }
+  .tag { color: #006; font-weight: bold; }
+  .atn { color: #440044; }
+  .atv { color: #006600; } }
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { padding: 2px; border: 1px solid #888888; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; }
+
+/* IE indents via margin-left */
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 { list-style-type: none; }
+
+/* Alternate shading for lines */
+li.L1, li.L3, li.L5, li.L7, li.L9 { background: #eeeeee; }
+
 body { background: #eeeeee; color: #555555; font-family: "Open Sans", "Helvetica Neue", Arial, Garuda, Sans-serif; font-size: 16px; font-weight: 400; letter-spacing: -0.05em; line-height: 1.5em; }
 @media screen and (max-width: 1024px) { body { font-size: 14px; } }
 @media screen and (max-width: 840px) { body { font-size: 12px; } }
@@ -91,7 +140,7 @@ header a:visited, header a:focus, header a:active { color: #fbfbfb; border-botto
 .pagination-arrow .newer:before, .pagination-arrow .older:before { content: ''; border: 5px solid #555; border-color: transparent #555 transparent transparent; width: 0; height: 0; position: absolute; left: 3px; top: 12px; }
 .pagination-arrow .older:before { left: auto; right: 3px; border-color: transparent transparent transparent #555; }
 
-body.error-404 { color: #eeeeee; width: 100%; background-size: cover; background: #0eb871; /* fallback for non-supporting browsers */ background-image: -webkit-gradient(radial, center center, 0, center center, 141, from(#12e88f), to(#0eb871), color-stop(80%, #0eb871)); /* old WebKit Syntax */ background-image: -webkit-radial-gradient(center center, circle contain, #12e88f 0%, #0eb871 80%, #0eb871 100%); /* New WebKit syntax */ background-image: -moz-radial-gradient(center center, circle contain, #12e88f 0%, #0eb871 80%, #0eb871 100%); background-image: -ms-radial-gradient(center center, circle contain, #12e88f 0%, #0eb871 80%, #0eb871 100%); /* IE10+ */ background-image: -o-radial-gradient(center center, circle contain, #12e88f 0%, #0eb871 80%, #0eb871 100%); /* Opera (13?) */ }
+body.error-404 { height: 100%; color: #eeeeee; width: 100%; background-size: cover; background: #0eb871; /* fallback for non-supporting browsers */ background-image: -webkit-gradient(radial, center center, 0, center center, 141, from(#12e88f), to(#0eb871), color-stop(80%, #0eb871)); /* old WebKit Syntax */ background-image: -webkit-radial-gradient(center center, circle contain, #12e88f 0%, #0eb871 80%, #0eb871 100%); /* New WebKit syntax */ background-image: -moz-radial-gradient(center center, circle contain, #12e88f 0%, #0eb871 80%, #0eb871 100%); background-image: -ms-radial-gradient(center center, circle contain, #12e88f 0%, #0eb871 80%, #0eb871 100%); /* IE10+ */ background-image: -o-radial-gradient(center center, circle contain, #12e88f 0%, #0eb871 80%, #0eb871 100%); /* Opera (13?) */ }
 
 .message { padding-top: 50px; }
 .message h1 { font-size: 36px; margin-bottom: 18px; }
