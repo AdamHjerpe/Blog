@@ -19,7 +19,7 @@
           <h1><a href="<?php echo site_url() ?>"><?php echo config('blog.title') ?></a></h1>
         </section>
     </header>
-    <!-- /.main-header -->    
+    <!-- /.main-header -->
     <section class="wrapper">
     <aside class="sidebar">
 
@@ -31,7 +31,7 @@
             <li><a href="https://github.com/AdamHjerpe/">Github</a></li>
         </ul>
 
-        <p>This blog template is open source, fork it on <a href="https://github.com/AdamHjerpe/Blog">Github</a></p>
+        <p>This blog template and engine is open source, fork it on <a href="https://github.com/AdamHjerpe/Blog">Github</a></p>
 
         <p class="author"><?php echo config('blog.authorbio') ?></p>
 
@@ -50,5 +50,9 @@
     </footer>
     <!-- /.main-footer -->
     <!-- Keep script import at bottom, right before closing </body> tag -->
+    <script type="text/javascript">
+        a
+    </script>
+    <script type="text/javascript" src="prettify.min.js"></script>
   </body>
 </html>

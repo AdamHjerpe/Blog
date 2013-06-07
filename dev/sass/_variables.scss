@@ -24,12 +24,15 @@
   // Facebook Blue:;
     // $head-col: #4660a2;
   // Linus Lilja Teal: 
-    $head-col: #10D080;
+    // $head-col: #10D080;
   // Random Red
-    // $head-col: #C14444;
+    $head-col: #C14444;
 
 // Background color
   $bg-col: #eeeeee;
+// Background image or alternative color
+  $bg-img: url(http://content.wallpapers-room.com/resolutions/1920x1200/I/Wallpapers-room_com___It_s_Wood_by_niklasK_1920x1200.jpg) fixed center center $bg-col;
+
 
 // Font Color
   $font-col: #555555;

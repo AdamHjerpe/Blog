@@ -36,7 +36,7 @@
 ////////////
 
 body {
-	background: $bg-col;
+	background: $bg-img;
 	color: $font-col;
 	font: {
 		family: $p-font;
@@ -77,12 +77,13 @@ header {
 	}
 
 .header-wrap {
-  position: fixed;
+  position: absolute;
   height: auto;
   top: 0em;
   left: 50%;
   bottom: 0;
   margin-left: -460px;
+  z-index: 2;
   h1 {
     background: $head-col;
     border-bottom: 0.5em solid darken($head-col, 5%);
@@ -117,7 +118,7 @@ header {
   position: absolute;
   font: 1em/1.5 $p-font;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -6.25em;
 	padding: 1.5em 3em;
 	background: lighten($bg-col, 2.5%);
   @media screen and (max-width: $break-large) {
@@ -139,15 +140,17 @@ header {
 
 .sidebar{
 	position: fixed;
-  width: 250px;
+  background: darken($bg-col, 5%);
+  width: 15.625em;
   height: auto;
   top: 7em;
   left: 50%;
   bottom: 0;
-  margin-left: -460px;
-  padding-top: 65px;
+  margin-left: -28.750em;
+  padding: 4em 1.5em 1.5em 1.5em;
+  z-index: 1;
   ul{
-    font: bold 18px 'Open Sans Condensed', sans-serif;
+    font: bold 1.1em $h-font;
     text-transform: uppercase;
     list-style:none;}
   ul li a{
