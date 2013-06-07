@@ -169,4 +169,6 @@ blockquote {
 
 code, pre {
   font-family: $code-font;
+  background: darken($bg-col, 5%);
+  //margin: 1em;
 }
