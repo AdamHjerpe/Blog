@@ -50,9 +50,8 @@
     </footer>
     <!-- /.main-footer -->
     <!-- Keep script import at bottom, right before closing </body> tag -->
-    <script type="text/javascript">
-        a
-    </script>
-    <script type="text/javascript" src="prettify.min.js"></script>
+    <script src="js/highlight.pack.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!--script type="text/javascript" src="js/prettify.min.js"></script-->
   </body>
 </html>
