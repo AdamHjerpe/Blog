@@ -21,5 +21,5 @@ In order to get that RSS-feed so people can follow your blog we use this package
 ## Extension Dependencies
 As time goes on further dependencies will be added here.
 
-### [google/code-prettify](https://code.google.com/p/google-code-prettify/)
-This plugin resides within the dev/js folder, it's imported from the source files from google. Also this is what gives us syntax highlighting.
+### [highlight.js](http://softwaremaniacs.org/soft/highlight/en/)
+This plugin resides within the dev/js folder, it's imported from the source files from google. Also this is what gives us syntax highlighting. The syntax styling can be changed in the dev/sass/_highlight.scss file, a guide and several themes is available at  [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) with the downloadable .zip archive. The package copyright license is found in the distributed file and in the license folder.

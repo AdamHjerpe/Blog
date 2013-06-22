@@ -168,6 +168,7 @@ blockquote {
 ///////////////////
 
 code, pre {
+  overflow-wrap: break-word;
   font-family: $code-font;
   background: darken($bg-col, 5%);
   //margin: 1em;

@@ -45,37 +45,30 @@ blockquote:before { content: open-quote; }
 blockquote:after { content: close-quote; }
 blockquote p { display: inline; }
 
-code, pre { font-family: Cousine, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; background: #e1e1e1; }
+code, pre { overflow-wrap: break-word; font-family: Cousine, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; background: #e1e1e1; }
 
-.pln { color: black; }
+/*
 
-@media screen { .str { color: #008800; }
-  .kwd { color: #000088; }
-  .com { color: #880000; }
-  .typ { color: #660066; }
-  .lit { color: #006666; }
-  .pun, .opn, .clo { color: #666600; }
-  .tag { color: #000088; }
-  .atn { color: #660066; }
-  .atv { color: #008800; }
-  .dec, .var { color: #660066; }
-  .fun { color: red; } }
-@media print, projection { .str { color: #006600; }
-  .kwd { color: #006; font-weight: bold; }
-  .com { color: #600; font-style: italic; }
-  .typ { color: #404; font-weight: bold; }
-  .lit { color: #004444; }
-  .pun, .opn, .clo { color: #444400; }
-  .tag { color: #006; font-weight: bold; }
-  .atn { color: #440044; }
-  .atv { color: #006600; } }
-pre.prettyprint { padding: 2px; border: 1px solid #888888; }
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
 
-ol.linenums { margin-top: 0; margin-bottom: 0; }
+*/
+pre code { display: block; padding: 0.5em; background: #fdf6e3; color: #657b83; }
 
-li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 { list-style-type: none; }
+pre .comment, pre .template_comment, pre .diff .header, pre .doctype, pre .pi, pre .lisp .string, pre .javadoc { color: #93a1a1; font-style: italic; }
 
-li.L1, li.L3, li.L5, li.L7, li.L9 { background: #eeeeee; }
+pre .keyword, pre .winutils, pre .method, pre .addition, pre .css .tag, pre .request, pre .status, pre .nginx .title { color: #859900; }
+
+pre .number, pre .command, pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula, pre .regexp, pre .hexcolor { color: #2aa198; }
+
+pre .title, pre .localvars, pre .chunk, pre .decorator, pre .built_in, pre .identifier, pre .vhdl .literal, pre .id { color: #268bd2; }
+
+pre .attribute, pre .variable, pre .lisp .body, pre .smalltalk .number, pre .constant, pre .class .title, pre .parent, pre .haskell .type { color: #b58900; }
+
+pre .preprocessor, pre .preprocessor .keyword, pre .shebang, pre .symbol, pre .symbol .string, pre .diff .change, pre .special, pre .attr_selector, pre .important, pre .subst, pre .cdata, pre .clojure .title { color: #cb4b16; }
+
+pre .deletion { color: #dc322f; }
+
+pre .tex .formula { background: #eee8d5; }
 
 body { background: url(http://content.wallpapers-room.com/resolutions/1920x1200/I/Wallpapers-room_com___It_s_Wood_by_niklasK_1920x1200.jpg) fixed center center #eeeeee; color: #555555; font-family: "Open Sans", "Helvetica Neue", Arial, Garuda, Sans-serif; font-size: 16px; font-weight: 400; letter-spacing: -0.05em; line-height: 1.5em; }
 @media screen and (max-width: 1024px) { body { font-size: 14px; } }
