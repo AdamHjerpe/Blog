@@ -13,63 +13,30 @@
 
  * { margin: 0; padding: 0; border: none; outline: none; vertical-align: baseline; -webkit-font-smoothing: subpixel-antialiased;}
 
-///////////////
-// Variables //
-///////////////
+/////////////////////////////
+// Import of all variables //
+/////////////////////////////
 
-// Breakpoints
-  $break-small: 840px;
-  $break-large: 1024px;
+@import "variables.scss";
 
-// Font-sizes
-
-// Desktop font-size
-	$f-size: 16px;
-// Tablet font-size
-	$f-size-m: 14px;
-// Mobile font-size 
-	$f-size-s: 12px;
-
-// Line height, change to match vertical rhytm for document
-	$l-height: 1.5em;
-
-// Header background color or pattern
-	// Orange:;
-		// $head-col: #FF9666;
-	// Facebook Blue:;
-	  // $head-col: #4660a2;
-	// Linus Lilja Teal: 
-	  $head-col: #10D080;
-	// Random Red
-		// $head-col: #C14444;
-
-// Background color
-	$bg-col: #eeeeee;
-
-// Font Color
-	$font-col: #555555;
-
-////////////
-// Mixins //
-////////////
-
-@mixin col-width {
-		max-width: 37.5em;
-		min-width: 30em;} 
-
-////////////////////////////////
-//Import of typography styles //
-////////////////////////////////
+/////////////////////////////////
+// Import of typography styles //
+/////////////////////////////////
 
 @import "typography.scss";
+
+///////////////////////////////////
+// Import of CSS for prettify.js //
+///////////////////////////////////
+
+@import "highlight.scss";
 
 ////////////
 // Layout //
 ////////////
 
 body {
-	background: $bg-col;
-	// background: desaturate(lighten($head-col, 5%), 5%);
+	background: $bg-img;
 	color: $font-col;
 	font: {
 		family: $p-font;
@@ -110,12 +77,13 @@ header {
 	}
 
 .header-wrap {
-  position: fixed;
+  position: absolute;
   height: auto;
   top: 0em;
   left: 50%;
   bottom: 0;
   margin-left: -460px;
+  z-index: 2;
   h1 {
     background: $head-col;
     border-bottom: 0.5em solid darken($head-col, 5%);
@@ -150,7 +118,7 @@ header {
   position: absolute;
   font: 1em/1.5 $p-font;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -6.25em;
 	padding: 1.5em 3em;
 	background: lighten($bg-col, 2.5%);
   @media screen and (max-width: $break-large) {
@@ -172,15 +140,17 @@ header {
 
 .sidebar{
 	position: fixed;
-  width: 250px;
+  background: darken($bg-col, 5%);
+  width: 15.625em;
   height: auto;
   top: 7em;
   left: 50%;
   bottom: 0;
-  margin-left: -460px;
-  padding-top: 65px;
+  margin-left: -28.750em;
+  padding: 4em 1.5em 1.5em 1.5em;
+  z-index: 1;
   ul{
-    font: bold 18px 'Open Sans Condensed', sans-serif;
+    font: bold 1.1em $h-font;
     text-transform: uppercase;
     list-style:none;}
   ul li a{
@@ -213,10 +183,7 @@ header {
     ul{
         text-align: center;}
     .author{
-        display: none;}
-  }
-
-  }
+        display: none;}}}
 
 //////////////////
 // Post Styling //
@@ -240,7 +207,6 @@ header {
 	    top: -3px;
 	    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyNjZDQjA1OTM1ODZFMjExQUUwM0IwQzQwMjlEOTczMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENjYzQjI4QjhCNDYxMUUyQjNENkFGQ0NCRUExRDM1NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENjYzQjI4QThCNDYxMUUyQjNENkFGQ0NCRUExRDM1NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NjA1NUJCNzUzOEFFMjExQUUwM0IwQzQwMjlEOTczMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyNjZDQjA1OTM1ODZFMjExQUUwM0IwQzQwMjlEOTczMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhTXJRoAAADXSURBVHjaYvz//z8DNQDL7t27sYmDTGfEoQdDztXVlYEJyg4B4rdA/AGLJhjGJgfS4wfiwAyaCcRCQMwGxMxQMTY0jdjkQHqmwQzihwqAACcQ50CdXoRmEC45aXAYYQmDCVDMQIocskGMZEbYB+QwQokBEAaCzch8dDF0wMRAJcC4a9cufqjzYF7bTKReX5jXgC4UYMHiNbACYEJ9AaQkkL2BLIaekIeA15AUbEZiM+ARo67XQAZ9BOJ3eFxGSOwFcspOBOLnoBgh0SEgQ+LAgU2tgg0gwACqTkAIjemp4gAAAABJRU5ErkJggg==')
 }}}
-
 
 ////////////////////////
 // Pagination Styling //
@@ -282,8 +248,8 @@ header {
 $grad-col-outer: darken($head-col, 5%);
 $grad-col-inner: lighten($head-col, 5%);
 
-
 body.error-404 {
+  height: 100%;
   color: $bg-col;
   width: 100%;
   background-size: cover;

@@ -1,0 +1,46 @@
+///////////////
+// Variables //
+///////////////
+
+// Breakpoints
+  $break-small: 840px;
+  $break-large: 1024px;
+
+// Font-sizes
+
+// Desktop font-size
+  $f-size: 16px;
+// Tablet font-size
+  $f-size-m: 14px;
+// Mobile font-size 
+  $f-size-s: 12px;
+
+// Line height, change to match vertical rhytm for document
+  $l-height: 1.5em;
+
+// Header background color or pattern
+  // Orange:;
+    // $head-col: #FF9666;
+  // Facebook Blue:;
+    // $head-col: #4660a2;
+  // Linus Lilja Teal: 
+    // $head-col: #10D080;
+  // Random Red
+    $head-col: #C14444;
+
+// Background color
+  $bg-col: #eeeeee;
+// Background image or alternative color
+  $bg-img: url(http://content.wallpapers-room.com/resolutions/1920x1200/I/Wallpapers-room_com___It_s_Wood_by_niklasK_1920x1200.jpg) fixed center center $bg-col;
+
+
+// Font Color
+  $font-col: #555555;
+
+////////////
+// Mixins //
+////////////
+
+@mixin col-width {
+    max-width: 37.5em;
+    min-width: 30em;} 
