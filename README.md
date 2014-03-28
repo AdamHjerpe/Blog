@@ -1,7 +1,3 @@
-# The Markdown Blog 
-
-This project started out as a tutorial at Tutorialzine, and has since been a hobby project that I've maintained and experimented with.
-
 # Dependencies 
 
 ## Core Dependencies
